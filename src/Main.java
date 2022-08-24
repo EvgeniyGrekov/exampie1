@@ -6,16 +6,18 @@ public class Main {
         Author levTolstoy = new Author("Лев", "Толстой");
         Author viktorPelevin = new Author("Виктор", "Пелевин");
         Book warAndPeace = new Book("Война и мир", 1965, levTolstoy);
+        Book warAndPeaceSecond = new Book("Война и мир", 1965, levTolstoy);
         Book generationP = new Book("Дженерейшн Пи", 1999, viktorPelevin);
 
         warAndPeace.setPublishDate(1867);
 
-        System.out.println (warAndPeace.getTitle() + " " + warAndPeace.getPublishDate() + " " + warAndPeace.getAuthor());
-        System.out.println (generationP.getTitle() + " " + generationP.getPublishDate() + " " + generationP.getAuthor());
+        System.out.println (warAndPeace);
+        System.out.println (generationP);
 
+        System.out.println ();
+
+        System.out.println(warAndPeace.equals(warAndPeaceSecond));
 
     }
-
-
 
 }
