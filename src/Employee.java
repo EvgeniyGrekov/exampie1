@@ -56,5 +56,6 @@ public class Employee {
         this.salary = salary;
         id = ++counter;
     }
+
 }
 
