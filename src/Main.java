@@ -9,7 +9,7 @@ public class Main {
         employees[2] = new Employee("Вася Федичкинн", 3, 9000.0);
         employees[3] = new Employee("Петя Манукян", 4, 3000.0);
         employees[4] = new Employee("Люся Кокаинова", 5, 7000.0);
-        employees[6] = new Employee("null", 1, 5000.0);
+        employees[6] = new Employee(null, 1, 5000.0);
         employees[8] = new Employee("Уй Алупкин", 1, 6000.0);
         getAndCalkulateSalarySum();
 
@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Сумма затрат на зарплаты в месяц = " + getAndCalkulateSalarySum());
         System.out.println("Сотрудник с минимальной зарплатой - " + getEmployeeMinSalary());
         System.out.println("Сотрудник с максимальной зарплатой - " + getEmployeeMaxSalary());
-        System.out.println("Средняя зарплата в месяц = " + getANDcALCULATEAverageSalary());
+        System.out.println("Средняя зарплата в месяц = " + getAndCalculateAverageSalary());
         System.out.println();
 
         printFullNameAllEmployee();
@@ -92,10 +92,10 @@ public class Main {
         }
         return maxSalaryEmpl;
     }
-    public static double getANDcALCULATEAverageSalary(){
+    public static double getAndCalculateAverageSalary(){
         double sumSalaryAllEmpl = getAndCalkulateSalarySum();
         if (employees.length != 0) {
-            return sumSalaryAllEmpl / employees.length;
+            return sumSalaryAllEmpl / Employee.getCounter();
         } else {
             return 0;
         }
